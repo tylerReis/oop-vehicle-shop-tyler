@@ -101,12 +101,13 @@ class CarManager:
     @classmethod
     def add_car(cls):
         owner_name = input("Enter name in First_Last format: ")
+        
         new_make = input("Enter make: ") 
         new_model = input("Enter model: ")
         new_year = CarManager.check_int(input("Enter year: "), "year")
         new_mileage = CarManager.check_int(input("Enter Mileage: "), "Mileage")
             
-
+        # Could still use geters/setters so when cls runs, it runs getters and setters
         new_car = cls(new_make, new_model, new_year, new_mileage)
         # print(new_car)
         CarManager.all_cars[owner_name] = new_car
